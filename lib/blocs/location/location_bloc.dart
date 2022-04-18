@@ -33,7 +33,7 @@ class LocationBloc extends Bloc<LocationEvent, LocationState> {
   Future getCurrentPosition() async{
     //obtengo posicion con el geolocator
     final position = await Geolocator.getCurrentPosition();
-
+      add(OnNewUserLocationEvent(LatLng(21.0191314,-89.6170764)));
     print('position $position');
   }
 

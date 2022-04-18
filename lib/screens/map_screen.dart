@@ -41,7 +41,10 @@ class _MapScreenState extends State<MapScreen> {
       body: BlocBuilder<LocationBloc, LocationState>(
         builder: (context, state) {
           
-          if(state.lastKnownLocation == null) return const Center(child: Text('Espere, por favor...'),);
+          if(state.lastKnownLocation == null) {
+            return const Center(child: Text('Espere por favor...',
+              style: TextStyle(fontSize: 25, fontWeight:  FontWeight.w300),),);
+          }
 
 
           return SingleChildScrollView(
